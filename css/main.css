@@ -1,0 +1,194 @@
+html, body, p  {
+    margin: 0;
+    padding: 0;
+}
+
+/* ##################### */
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__section {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    align-items: center !important;
+    padding-left: 10px;
+}
+
+.navbar__section-arrow {
+    font-size: 45px !important;
+    color: rgb(68,121,251);
+}
+
+.navbar__section-title {
+    font-family:  Helvetica;
+    font-size: 16px;
+    color: rgb(68,121,251);
+    padding-left: 5px;
+}
+
+.navbar__app {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar__app-logo {
+    width: 28px;
+    height: 28px;
+    background: gray;
+    border-radius: 30%;
+}
+
+.navbar__app-get {
+    color: white;
+    background-color: rgb(68,121,251);
+    font-family: Helvetica;
+    font-weight: bold;
+    padding: 5px 17px 5px 17px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 2px;
+}
+
+.navbar__app-iap {
+    color: #8e8f92;
+    font-family: Helvetica;
+    font-size: 7px;
+    text-align: right;
+    width: 40%;
+}
+
+/* ##################### */
+
+.game__header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.game__header__icon {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.game__header__icon-img {
+    width: 120px;
+    height: 120px;
+    background: gray;
+    border-radius: 15%;
+}
+
+.game__header__info {
+    width: 60%;
+}
+
+.game__header__info-title {
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+.game__header__info-subtitle {
+    margin-top: 5px;
+    color: #636366;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.game__header__info__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.game__header__info__buttons-iap {
+    color: #8e8f92;
+    font-family: Helvetica;
+    font-size: 7px;
+    text-align: left;
+    width: 45%;
+}
+
+.game__header__info__buttons-get {
+    color: white;
+    background-color: rgb(68,121,251);
+    font-family: Helvetica;
+    font-weight: bold;
+    padding: 5px 17px 5px 17px;
+    border-radius: 20px;
+    margin-right: 7px;
+    margin-left: 2px;
+}
+
+.game__header__info__buttons-share {
+    color: white;
+    background: rgb(68,121,251);;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* ##################### */
+
+.game__rating {
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game__rating-title {
+    color: #636366;
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: row;
+}
+
+.game__rating-subtitle {
+    margin-top: 2px;
+    font-size: 8px;
+    color: #636366;
+    font-family: Helvetica;
+}
+
+.game__rating-stars {
+    width: 50%;
+}
+
+.game__rating-title > i {
+    padding: 0 1px;
+}
+
+.game__rating-category {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+}
+
+.game__rating-age {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
+.game__rating-category-subtext {
+    font-size: 12px;
+}
