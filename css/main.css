@@ -208,5 +208,24 @@ html, body, p  {
 }
 
 .game__screenshots-img:first-child {
-    margin-left: 20px;
+    margin-left: 5%;
+}
+
+/* ##################### */
+
+.ipadApp {
+    color: #636366;
+    display: flex;
+    flex-direction: row;
+    font-family: Helvetica;
+    margin:  0 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(213,213,213);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ipadApp > p {
+    width: 80%;
+    font-size: 14px;
 }
