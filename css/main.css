@@ -325,3 +325,141 @@ html, body, p  {
 .game__about-developer-dev {
     font-size: 10px;
 }
+
+/* ##################### */
+
+.game__reviews {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+}
+
+.game__reviews-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.game__reviews-title-m {
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.game__reviews-title-o {
+    color: rgb(68,121,251);
+    font-size: 13px;
+    font-family: Helvetica;
+}
+
+.game__reviews__ratings {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__reviews__ratings-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34%;
+}
+
+.game__reviews__ratings-stars {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    text-align: right;
+}
+
+.game__reviews__ratings-stats-row {
+    flex-grow: 1;
+}
+
+.game__reviews__ratings-bar {
+    width: 44%;
+}
+
+.game__reviews-other {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #636366;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.game__reviews-oof {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #636366;
+    font-size: 12px;
+}
+
+.game__reviews__ratings-rate {
+    font-size: 60px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #4c4c50;
+}
+
+.game__reviews__rr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.game__reviews__ratings-bs {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game__reviews__rating-bar-stars {
+    width: 30%;
+    font-size: 8px;
+    text-align: right;
+    color: #636366;
+    margin-right: 10px;
+}
+
+.game__reviews__rating-bar-b {
+    width: 70%;
+    background: rgb(238,238,244);
+    height: 3px;
+}
+
+.game__reviews__rating-bar-c {
+    height: 3px;
+    background: rgb(99,99,102);
+    z-index: 9999;
+}
+
+.game__reviews__ratings-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.game__reviews__rating-count {
+    margin-top: 10px;
+    text-align: right;
+    font-family: Helvetica;
+    color: #636366;
+    font-size: 14px;
+}
+
+/*0-100%*/
+#ratingBar1 {width: 80%}
+#ratingBar2 {width: 15%}
+#ratingBar3 {width: 3%}
+#ratingBar4 {width: 1%}
+#ratingBar5 {width: 1%}
+
