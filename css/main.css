@@ -322,6 +322,8 @@ html, body, p  {
     display: flex;
     flex-direction: column;
     margin: 20px 20px 20px 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(213,213,213);
 }
 
 .game__reviews-title {
@@ -462,13 +464,12 @@ html, body, p  {
 
 .game__reviews-swiper-card {
 
-    height: 180px;
+    height: 180px !important;
     background: rgb(248,248,248);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     font-family: Helvetica;
-    /*margin: 0 20px;*/
 }
 
 .game__reviews-swiper-card-info {
@@ -504,4 +505,49 @@ html, body, p  {
 
 .game__reviews-swiper {
     width: 100%;
+}
+
+
+/*#####################*/
+
+.info {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.info__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(213,213,213);
+    padding: 10px 0;
+}
+
+.info__title {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info__row-a {
+    color: #636366;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.info__row-sp {
+    color: #636366;
+}
+
+.info__row-b {
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.info__row-blue > div {
+    color: rgb(68,121,251) !important;
 }
