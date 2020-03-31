@@ -293,7 +293,6 @@ html, body, p  {
     border-bottom: 1px solid rgb(213,213,213);
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 200px;
 }
 
 .ipadApp > p {
@@ -303,3 +302,26 @@ html, body, p  {
 
 /* ##################### */
 
+.game__about {
+    margin: 20px 20px 20px 20px;
+    font-family: Helvetica;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(213,213,213);
+    padding-bottom: 20px;
+}
+
+.game__about-developer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #636366;
+}
+
+.game__about-developer-name {
+    color: rgb(68,121,251);
+}
+
+.game__about-developer-dev {
+    font-size: 10px;
+}
