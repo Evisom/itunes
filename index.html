@@ -17,14 +17,14 @@
         </p>
     </div>
     <div class="navbar__app" id="navbarApp">
-        <div class="navbar__app-logo"></div>
+        <div class="navbar__app-logo" style="background: url('./img/logo.png')"></div>
         <div class="navbar__app-iap">In-App <br> Purchases</div>
         <div class="navbar__app-get">GET</div>
     </div>
 </div>
 <div class="game__header">
     <div class="game__header__icon">
-        <div class="game__header__icon-img"></div>
+        <div class="game__header__icon-img" style="background: url('./img/logo.png')"></div>
     </div>
     <div class="game__header__info">
         <div class="game__header__info-title">Game title</div>
@@ -70,11 +70,19 @@
 <div class="swiper-container game__swiper-container" id="swiperContainer">
 
     <div class="swiper-wrapper game__swiper-wrapper">
-        <div class="swiper-slide game__swiper-slide" id="slide"></div>
-        <div class="swiper-slide game__swiper-slide" id="slide"></div>
-        <div class="swiper-slide game__swiper-slide" id="slide"></div>
-        <div class="swiper-slide game__swiper-slide" id="slide"></div>
-        <div class="swiper-slide game__swiper-slide" id="slide"></div>
+
+
+        <div class="swiper-slide game__swiper-slide">
+            <video src="./video/video.MP4"  width="100%" playsinline loop muted autoplay></video>
+        </div>
+
+
+        <div class="swiper-slide game__swiper-slide" id="slide" style="background: url('./img/screenshot1.jpg')"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide" style="background: url('./img/screenshot2.jpg')"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide" style="background: url('./img/screenshot1.jpg')"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide" style="background: url('./img/screenshot2.jpg')"></div>
+
+
     </div>
 
 </div>
@@ -329,13 +337,14 @@
     const navbarApp = document.getElementById('navbarApp')
 
     window.onscroll = function ( ) {
+        document.getElementById("navbar").style.border = '1px solid rgba(117,117, 117, 0.2)';
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         if (winScroll >= 120 ) {
             navbarApp.id = 'navbarAppOn';
-
         } else {
             document.getElementById("navbar").style.background = 'rgba(255,255,255,' +  winScroll / 100  + ')';
             navbarApp.id = 'navbarApp';
+            document.getElementById("navbar").style.border = 'none';
         }
     }
 

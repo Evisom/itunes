@@ -40,7 +40,6 @@ html, body, p  {
 
 .navbar__app {
     display: none;
-    /*display: flex;*/
     flex-direction: row;
     width: 55%;
     align-items: center;
@@ -56,6 +55,7 @@ html, body, p  {
     height: 28px;
     background: gray;
     border-radius: 30%;
+    background-size: 100% 100% !important;
 }
 
 .navbar__app-get {
@@ -99,6 +99,7 @@ html, body, p  {
     height: 120px;
     background: gray;
     border-radius: 15%;
+    background-size: 100% 100% !important;
 }
 
 .game__header__info {
@@ -107,7 +108,7 @@ html, body, p  {
 
 .game__header__info-title {
     font-family: Helvetica;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .game__header__info-subtitle {
@@ -209,14 +210,22 @@ html, body, p  {
     margin: 20px 0 !important;
     z-index: 999 !important;
 }
+
+.game__swiper-slide > video {
+    border-radius: 30px !important;
+    max-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 .game__swiper-slide {
     height: 550px !important;
     text-align: center;
     font-size: 18px;
     background: #fff;
+    background-size: 100% 100% !important;
     width: 275px!important;
     background: gray;
-    border-radius: 30px;
+    border-radius: 30px !important;
     align-items: center;
     margin-left: 10px;
 }
@@ -501,6 +510,7 @@ html, body, p  {
 
 .game__reviews-swiper-card-info-title {
     font-weight: bold;
+    font-size: 16px;
 }
 
 .game__reviews-swiper-card-info-stars {
@@ -515,7 +525,7 @@ html, body, p  {
 
 .game__reviews-swiper-card-text {
     margin: 0px 20px 10px 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .game__reviews-swiper {
