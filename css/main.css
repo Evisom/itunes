@@ -189,12 +189,13 @@ html, body, p  {
 
 /* ##################### */
 
-.swiper-container {
+.game__swiper-container {
     height: 550px;
     width: 100%;
     margin: 20px 0 !important;
+    z-index: 999 !important;
 }
-.swiper-slide {
+.game__swiper-slide {
     height: 550px !important;
     text-align: center;
     font-size: 18px;
@@ -202,30 +203,19 @@ html, body, p  {
     width: 275px!important;
     background: gray;
     border-radius: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     margin-left: 10px;
 }
 
-.swiper-slide:first-child {
+.game__swiper-slide:first-child {
     margin-left: 15px;
 }
 
-.swiper-slide:last-child {
+.game__swiper-slide:last-child {
     margin-right: 50px;
 }
 
-.swiper-slide-prev {
+.game__swiper-slide.swiper-slide-prev {
     padding-right: 10px;
 }
 
@@ -256,13 +246,13 @@ html, body, p  {
     height: 100%;
 }
 
-#swiperContainerOpen > .swiper-wrapper > .swiper-slide {
+#swiperContainerOpen > .game__swiper-wrapper > .game__swiper-slide {
     width: 78vw !important;
     height: 78vh !important;
 }
 
-#swiperContainerOpen > .swiper-wrapper >.swiper-slide-prev {
-    padding-right: 10px !important;
+#swiperContainerOpen > .game__swiper-wrapper >.swiper-slide-prev.game__swiper-slide {
+    padding-right: 30px !important;
 }
 
 #swiperDoneOpen {
@@ -413,6 +403,7 @@ html, body, p  {
     width: 100%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .game__reviews__ratings-bs {
@@ -463,3 +454,54 @@ html, body, p  {
 #ratingBar4 {width: 1%}
 #ratingBar5 {width: 1%}
 
+
+.games__reviews-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.game__reviews-swiper-card {
+
+    height: 180px;
+    background: rgb(248,248,248);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica;
+    /*margin: 0 20px;*/
+}
+
+.game__reviews-swiper-card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 20px 10px 20px;
+}
+
+.game__reviews-swiper-card-info-m {
+    text-align: left;
+    font-size: 12px;
+}
+
+.game__reviews-swiper-card-info-title {
+    font-weight: bold;
+}
+
+.game__reviews-swiper-card-info-stars {
+    color: rgb(230,147,36);
+}
+
+.game__reviews-swiper-card-info-o {
+    color: #636366;
+    text-align: right;
+    font-size: 12px;
+}
+
+.game__reviews-swiper-card-text {
+    margin: 0px 20px 10px 20px;
+    font-size: 12px;
+}
+
+.game__reviews-swiper {
+    width: 100%;
+}

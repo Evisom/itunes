@@ -67,14 +67,14 @@
 <div class="swiperDone" id="swiperDone">
     <p id="DoneButton">Done</p>
 </div>
-<div class="swiper-container" id="swiperContainer">
+<div class="swiper-container game__swiper-container" id="swiperContainer">
 
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" id="slide"></div>
-        <div class="swiper-slide" id="slide"></div>
-        <div class="swiper-slide" id="slide"></div>
-        <div class="swiper-slide" id="slide"></div>
-        <div class="swiper-slide" id="slide"></div>
+    <div class="swiper-wrapper game__swiper-wrapper">
+        <div class="swiper-slide game__swiper-slide" id="slide"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide"></div>
+        <div class="swiper-slide game__swiper-slide" id="slide"></div>
     </div>
 
 </div>
@@ -179,15 +179,83 @@
         </div>
     </div>
 
+    <div class="game__reviews-swiper swiper-container">
+        <div class="game__reviews-swiper-wrapper swiper-wrapper">
+            <div class="swiper-slide game__reviews-swiper-card">
+                <div class="game__reviews-swiper-card-info">
+                    <div class="game__reviews-swiper-card-info-m">
+                        <p class="game__reviews-swiper-card-info-title">Cool game</p>
+                        <div class="game__reviews-swiper-card-info-stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="game__reviews-swiper-card-info-o">
+                        <p class="game__reviews-swiper-card-date">4d ago</p>
+                        <p class="game__reviews-swiper-card-name">evisom</p>
+                    </div>
+                </div>
+                <div class="game__reviews-swiper-card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta eveniet facere magnam nobis pariatur quaerat quo rem tempora. Alias aspernatur deserunt dolore error eveniet fugit odit quisquam rerum totam.
+                </div>
+            </div>
+            <div class="swiper-slide game__reviews-swiper-card">
+                <div class="game__reviews-swiper-card-info">
+                    <div class="game__reviews-swiper-card-info-m">
+                        <p class="game__reviews-swiper-card-info-title">Awesome game</p>
+                        <div class="game__reviews-swiper-card-info-stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="game__reviews-swiper-card-info-o">
+                        <p class="game__reviews-swiper-card-date">7d ago</p>
+                        <p class="game__reviews-swiper-card-name">richard</p>
+                    </div>
+                </div>
+                <div class="game__reviews-swiper-card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta eveniet facere magnam nobis pariatur quaerat quo rem tempora. Alias aspernatur deserunt dolore error eveniet fugit odit quisquam rerum totam.
+                </div>
+            </div>
+            <div class="swiper-slide game__reviews-swiper-card">
+                <div class="game__reviews-swiper-card-info">
+                    <div class="game__reviews-swiper-card-info-m">
+                        <p class="game__reviews-swiper-card-info-title">Cool</p>
+                        <div class="game__reviews-swiper-card-info-stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="game__reviews-swiper-card-info-o">
+                        <p class="game__reviews-swiper-card-date">1d ago</p>
+                        <p class="game__reviews-swiper-card-name">Dmitriy</p>
+                    </div>
+                </div>
+                <div class="game__reviews-swiper-card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dicta eveniet facere magnam nobis pariatur quaerat quo rem tempora. Alias aspernatur deserunt dolore error eveniet fugit odit quisquam rerum totam.
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.game__swiper-container', {
         slidesPerView: 'auto',
-        // updateOnWindowResize: 'true'
     });
 
      const swiperContainer = document.getElementById('swiperContainer');
@@ -209,6 +277,11 @@
         swiperOpen.id = 'swiperDone';
         swiper.update()
     }
+
+    const reviewsSwiper = new Swiper('.game__reviews-swiper', {
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+    })
 
 </script>
 </body>
