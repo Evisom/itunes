@@ -216,7 +216,15 @@ html, body, p  {
     max-height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    padding: 0 !important;
+    margin-right: 0px !important;
 }
+
+.game__swiper-slide-video {
+    padding: 0 !important;
+    margin-right: 0px !important;
+}
+
 .game__swiper-slide {
     height: 550px !important;
     text-align: center;
@@ -224,7 +232,7 @@ html, body, p  {
     background: #fff;
     background-size: 100% 100% !important;
     width: 275px!important;
-    background: gray;
+    /*background: gray;*/
     border-radius: 30px !important;
     align-items: center;
     margin-left: 10px;
@@ -275,7 +283,7 @@ html, body, p  {
 }
 
 #swiperContainerOpen > .game__swiper-wrapper >.swiper-slide-prev.game__swiper-slide {
-    padding-right: 30px !important;
+    padding-right: 30px;
 }
 
 #swiperDoneOpen {
