@@ -6,10 +6,16 @@ html, body, p  {
 /* ##################### */
 
 .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row;
+    background: white;
+    z-index: 9999 !important;
 }
 
 .navbar__section {
@@ -33,11 +39,16 @@ html, body, p  {
 }
 
 .navbar__app {
-    display: flex;
+    display: none;
+    /*display: flex;*/
     flex-direction: row;
     width: 55%;
     align-items: center;
     justify-content: space-around;
+}
+
+#navbarAppOn {
+    display: flex;
 }
 
 .navbar__app-logo {
@@ -69,6 +80,7 @@ html, body, p  {
 /* ##################### */
 
 .game__header {
+    margin-top: 50px;
     width: 100%;
     height: 120px;
     display: flex;
@@ -150,6 +162,8 @@ html, body, p  {
     font-family: Helvetica;
     display: flex;
     flex-direction: row;
+    align-items: center;
+
 }
 
 .game__rating-subtitle {
@@ -256,6 +270,7 @@ html, body, p  {
 }
 
 #swiperDoneOpen {
+    z-index: 999999;
     position: fixed;
     top: 0;
     left: 0;

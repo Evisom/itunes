@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
 </head>
 <body>
-<div class="navbar">
+<div class="navbar" id="navbar">
     <div class="navbar__section">
         <i class="navbar__section-arrow fa fa-angle-left"></i>
         <p class="navbar__section-title">
             Games
         </p>
     </div>
-    <div class="navbar__app">
+    <div class="navbar__app" id="navbarApp">
         <div class="navbar__app-logo"></div>
         <div class="navbar__app-iap">In-App <br> Purchases</div>
         <div class="navbar__app-get">GET</div>
@@ -307,7 +307,6 @@
      const swiperOpen = document.getElementById('swiperDone');
 
      swiperContainer.onclick = function () {
-         console.log(swiperContainer.id);
 
         if ( swiperContainer.id == 'swiperContainer' ) {
             swiperContainer.id += 'Open';
@@ -326,6 +325,19 @@
         spaceBetween: 30,
         slidesPerView: 'auto',
     })
+
+    const navbarApp = document.getElementById('navbarApp')
+
+    window.onscroll = function ( ) {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        if (winScroll >= 120 ) {
+            navbarApp.id = 'navbarAppOn';
+
+        } else {
+            document.getElementById("navbar").style.background = 'rgba(255,255,255,' +  winScroll / 100  + ')';
+            navbarApp.id = 'navbarApp';
+        }
+    }
 
 </script>
 </body>
