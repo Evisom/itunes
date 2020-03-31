@@ -189,27 +189,97 @@ html, body, p  {
 
 /* ##################### */
 
-.game__screenshots {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    align-items: center;
-}
-
-.game__screenshots-img {
-    flex: 0 0 auto;
-    width: 275px;
+.swiper-container {
     height: 550px;
+    width: 100%;
+    margin: 20px 0 !important;
+}
+.swiper-slide {
+    height: 550px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 275px!important;
     background: gray;
     border-radius: 30px;
-    margin: 0px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.game__screenshots-img:first-child {
-    margin-left: 5%;
+.swiper-slide:first-child {
+    margin-left: 15px;
 }
+
+.swiper-slide:last-child {
+    margin-right: 50px;
+}
+
+.swiper-slide-prev {
+    padding-right: 10px;
+}
+
+.swiperDone {
+    display: none;
+    font-family: Helvetica;
+    color: rgb(68,121,251);
+    font-weight: bold;
+}
+
+#DoneButton {
+    margin-right: 10px;
+}
+
+#swiperContainerOpen {
+    padding-top: 10px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background: white;
+    margin-top: 0 !important;
+}
+
+#swiperContainerOpen {
+    height: 100%;
+}
+
+#swiperContainerOpen > .swiper-wrapper > .swiper-slide {
+    width: 78vw !important;
+    height: 78vh !important;
+}
+
+#swiperContainerOpen > .swiper-wrapper >.swiper-slide-prev {
+    padding-right: 10px !important;
+}
+
+#swiperDoneOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 49px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(248,248,248);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgba(117,117, 117, 0.2);
+}
+
 
 /* ##################### */
 
@@ -223,9 +293,13 @@ html, body, p  {
     border-bottom: 1px solid rgb(213,213,213);
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 200px;
 }
 
 .ipadApp > p {
     width: 80%;
     font-size: 14px;
 }
+
+/* ##################### */
+

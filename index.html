@@ -6,6 +6,7 @@
     <title>App Store</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
 </head>
 <body>
 <div class="navbar">
@@ -63,17 +64,63 @@
         </div>
     </div>
 </div>
-<div class="game__screenshots">
-    <div class="game__screenshots-img"></div>
-    <div class="game__screenshots-img"></div>
-    <div class="game__screenshots-img"></div>
-    <div class="game__screenshots-img"></div>
-    <div class="game__screenshots-img"></div>
+<div class="swiperDone" id="swiperDone">
+    <p id="DoneButton">Done</p>
+</div>
+<div class="swiper-container" id="swiperContainer">
+
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" id="slide"></div>
+        <div class="swiper-slide" id="slide"></div>
+        <div class="swiper-slide" id="slide"></div>
+        <div class="swiper-slide" id="slide"></div>
+        <div class="swiper-slide" id="slide"></div>
+    </div>
+
 </div>
 <div class="ipadApp">
     <i class="fa fa-tablet"></i>
     <p>Offers iPad App</p>
     <i class="fa fa-chevron-down"></i>
 </div>
+<div class="game__about">
+    <div class="game__about-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus et eveniet, magnam magni, minus necessitatibus nobis officia omnis qui quibusdam reprehenderit veritatis? Dolores, fugiat harum laudantium modi repellendus suscipit.
+    </div>
+    <div class="game__about-developer">
+
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        // updateOnWindowResize: 'true'
+    });
+
+     const swiperContainer = document.getElementById('swiperContainer');
+     const DoneButton = document.getElementById('DoneButton');
+     const swiperOpen = document.getElementById('swiperDone');
+
+     swiperContainer.onclick = function () {
+         console.log(swiperContainer.id);
+
+        if ( swiperContainer.id == 'swiperContainer' ) {
+            swiperContainer.id += 'Open';
+            swiperOpen.id += 'Open';
+            swiper.update();
+
+        }
+     }
+    DoneButton.onclick = function () {
+        swiperContainer.id = 'swiperContainer';
+        swiperOpen.id = 'swiperDone';
+        swiper.update()
+    }
+
+</script>
 </body>
 </html>
