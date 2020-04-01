@@ -254,7 +254,7 @@ html, body, p  {
 }
 
 .game__swiper-slide.swiper-slide-prev {
-    padding-right: 10px;
+    /*padding-right: 10px;*/
 }
 
 .swiperDone {
