@@ -19,7 +19,7 @@
     <div class="navbar__app" id="navbarApp">
         <div class="navbar__app-logo" style="background: url('./img/logo.png')"></div>
         <div class="navbar__app-iap">In-App <br> Purchases</div>
-        <div class="navbar__app-get" id="trackFbLead">GET</div>
+        <div class="navbar__app-get" data-track>GET</div>
     </div>
 </div>
 <div class="game__header">
@@ -30,7 +30,7 @@
         <div class="game__header__info-title">Game title</div>
         <div class="game__header__info-subtitle">Game subtitle, game subtitle!</div>
         <div class="game__header__info__buttons">
-            <div class="game__header__info__buttons-get" id="trackFbLead">GET</div>
+            <div class="game__header__info__buttons-get" data-track>GET</div>
             <div class="game__header__info__buttons-iap">In-App <br>Purchases</div>
             <div class="game__header__info__buttons-share"><img src="./img/share.svg" alt=""></div>
         </div>
@@ -316,75 +316,9 @@
     fbq('init', fbPixelId);
     fbq('track', 'PageView');
 </script>
-<script>
-  const redirectUrl = 'https://www.google.com'; // CHANGE
-  const trackFbLead = function () {
-    var registryVal = window.localStorage.getItem(fbPixelId);
-    // console.log(registryVal)
-    var elapsed = registryVal ? (Date.now() - registryVal) : -1;
-    // console.log(elapsed)
- 
-    if (elapsed > 0 && Math.floor(elapsed / 1000) < 10) {
-      // console.log("fb lead already tracked")
-      location.href = redirectUrl
-      return
-    } else {
-      var img = new Image();
-      img.onload = function() {
-        window.localStorage.setItem(fbPixelId, Date.now());
-        location.href = redirectUrl
-      }
-      img.src = 'https://www.facebook.com/tr?id=' + fbPixelId + '&ev=Lead';
-    }
-  }
-
-  document.getElementById('trackFbLead').addEventListener('click', trackFbLead);
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-<script>
-    const swiper = new Swiper('.game__swiper-container', {
-        slidesPerView: 'auto',
-    });
-
-     const swiperContainer = document.getElementById('swiperContainer');
-     const DoneButton = document.getElementById('DoneButton');
-     const swiperOpen = document.getElementById('swiperDone');
-
-     swiperContainer.onclick = function () {
-
-        if ( swiperContainer.id == 'swiperContainer' ) {
-            swiperContainer.id += 'Open';
-            swiperOpen.id += 'Open';
-            swiper.update();
-
-        }
-     }
-    DoneButton.onclick = function () {
-        swiperContainer.id = 'swiperContainer';
-        swiperOpen.id = 'swiperDone';
-        swiper.update()
-    }
-
-    const reviewsSwiper = new Swiper('.game__reviews-swiper', {
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-    })
-
-    const navbarApp = document.getElementById('navbarApp')
-
-    window.onscroll = function ( ) {
-        document.getElementById("navbar").style.border = '1px solid rgba(117,117, 117, 0.2)';
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        if (winScroll >= 120 ) {
-            navbarApp.id = 'navbarAppOn';
-        } else {
-            document.getElementById("navbar").style.background = 'rgba(255,255,255,' +  winScroll / 100  + ')';
-            navbarApp.id = 'navbarApp';
-            document.getElementById("navbar").style.border = 'none';
-        }
-    }
-
-</script>
+<script src="scripts/fb.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>

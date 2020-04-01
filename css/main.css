@@ -104,6 +104,8 @@ html, body, p  {
 
 .game__header__info {
     width: 60%;
+    height: 120px;
+    position: relative;
 }
 
 .game__header__info-title {
@@ -122,7 +124,10 @@ html, body, p  {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .game__header__info__buttons-iap {
