@@ -6,7 +6,7 @@
     <title>App Store</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 </head>
 <body>
 <div class="navbar" id="navbar">
@@ -19,7 +19,7 @@
     <div class="navbar__app" id="navbarApp">
         <div class="navbar__app-logo" style="background: url('./img/logo.png')"></div>
         <div class="navbar__app-iap">In-App <br> Purchases</div>
-        <div class="navbar__app-get">GET</div>
+        <div class="navbar__app-get" id="trackFbLead">GET</div>
     </div>
 </div>
 <div class="game__header">
@@ -30,7 +30,7 @@
         <div class="game__header__info-title">Game title</div>
         <div class="game__header__info-subtitle">Game subtitle, game subtitle!</div>
         <div class="game__header__info__buttons">
-            <div class="game__header__info__buttons-get">GET</div>
+            <div class="game__header__info__buttons-get" id="trackFbLead">GET</div>
             <div class="game__header__info__buttons-iap">In-App <br>Purchases</div>
             <div class="game__header__info__buttons-share"><img src="./img/share.svg" alt=""></div>
         </div>
@@ -303,6 +303,43 @@
     </div>
 </div>
 
+<script>
+    var fbPixelId = "323425655590791";
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', fbPixelId);
+    fbq('track', 'PageView');
+</script>
+<script>
+  const redirectUrl = 'https://www.google.com'; // CHANGE
+  const trackFbLead = function () {
+    var registryVal = window.localStorage.getItem(fbPixelId);
+    // console.log(registryVal)
+    var elapsed = registryVal ? (Date.now() - registryVal) : -1;
+    // console.log(elapsed)
+ 
+    if (elapsed > 0 && Math.floor(elapsed / 1000) < 10) {
+      // console.log("fb lead already tracked")
+      location.href = redirectUrl
+      return
+    } else {
+      var img = new Image();
+      img.onload = function() {
+        window.localStorage.setItem(fbPixelId, Date.now());
+        location.href = redirectUrl
+      }
+      img.src = 'https://www.facebook.com/tr?id=' + fbPixelId + '&ev=Lead';
+    }
+  }
+
+  document.getElementById('trackFbLead').addEventListener('click', trackFbLead);
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script>
