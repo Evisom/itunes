@@ -21,7 +21,8 @@ DoneButton.onclick = function() {
 
 const reviewsSwiper = new Swiper(".game__reviews-swiper", {
   spaceBetween: 30,
-  slidesPerView: "auto"
+  slidesPerView: "auto",
+  preloadImages: true
 });
 
 const navbarApp = document.getElementById("navbarApp");
